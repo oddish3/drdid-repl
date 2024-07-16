@@ -19,13 +19,13 @@ Xsi.ps <- .75           # pscore index (strength of common support)
 nrep <- 10000           # Monte Carlo replications
 #-----------------------------------------------------------------------------
 # Set the Working Directory
-address <- "set/here/your/working/directory/for/panel"
+address <- "~/Documents/R_folder/drdid-repl/MonteCarlo/panel"
 
 setwd(address)
 #-----------------------------------------------------------------------------
 # load the necessary libraries
 # Install DRDID package
-devtools::install_github("pedrohcgs/DRDID")
+#devtools::install_github("pedrohcgs/DRDID")
 library(foreach)
 library(doSNOW)
 library(doRNG)

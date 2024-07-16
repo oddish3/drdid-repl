@@ -339,5 +339,5 @@ out1 <- paste0(address, "/", "Results.panel","/", out1, sep="")
 write.csv(mc.summary, file = out1)
 #-----------------------------------------------------------------------------
 # Save simulation results as RData
-out1Data <- paste0(address,"/MC-results/", "mc.dgp-",dgp,".n-",n,".RData")
-save.image(out1Data)
+# out1Data <- paste0(address,"/MC-results/", "mc.dgp-",dgp,".n-",n,".RData")
+# save.image(out1Data)
