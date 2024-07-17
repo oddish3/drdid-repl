@@ -19,7 +19,7 @@ sd.z4 <-  56.63891
 #-----------------------------------------------------------------------------
 
 dgps = function(dgp,n){
-  
+  browser()
   # Gen covariates
   x1 <- stats::rnorm(n, mean = 0, sd = 1)
   x2 <- stats::rnorm(n, mean = 0, sd = 1)
@@ -45,6 +45,7 @@ dgps = function(dgp,n){
   if(dgp ==1) {
     # Gen groups
     # Propensity score
+    browser()
     pi <- stats::plogis(Xsi.ps * (- z1 + 0.5 * z2 - 0.25 * z3 - 0.1 * z4)) 
     #pi <- pmin(pi, 0.999)
     d  <- as.numeric(runif(n) <= pi)

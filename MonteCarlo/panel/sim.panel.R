@@ -35,6 +35,7 @@ a <- foreach (nn = 1:nrep) %dorng% {
   ############################################################################
   #---------------------------------------------------------------------------
   # Improved DR estimator
+  debug(DRDID::drdid_imp_panel)
   dr.imp <- DRDID::drdid_imp_panel(y1, y0, d, x, boot = bboot)
   # Whether the CI covers the true ATT (coverage probability)
   cp_imp <- as.numeric((dr.imp$lci <= att.true) * (dr.imp$uci >= att.true))

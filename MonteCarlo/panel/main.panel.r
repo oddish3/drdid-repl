@@ -13,10 +13,10 @@ rm(list=ls())
 #-----------------------------------------------------------------------------
 # Basic parameters for the simulation - Doesn't change over setups
 #nrep    <- 1000        # Monte Carlo replications
-ncores  <- 14           # Number of cores to use in parallel
+ncores  <- 12           # Number of cores to use in parallel
 seed1   <- 1234         # Set initial seed (guaranteed reproducibility)
 Xsi.ps <- .75           # pscore index (strength of common support)
-nrep <- 10000           # Monte Carlo replications
+nrep <- 1000           # Monte Carlo replications
 #-----------------------------------------------------------------------------
 # Set the Working Directory
 address <- "~/Documents/R_folder/drdid-repl/MonteCarlo/panel"
@@ -44,8 +44,8 @@ set.seed(seed1)
 # Run the simulations for all DGPs and all sample sizes (no bootstrap)
 bboot <- F
 
-for (nn in 2:3){
-  for (dgp in 1:4){
+for (nn in 2:2){ # nn = 2
+  for (dgp in 1:4){ # dgp = 1
     
     #set sample size
     if(nn==1) n <- 200
